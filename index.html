@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <i class="fas fa-leaf leaf-decoration leaf-1"></i>
+        <i class="fas fa-leaf leaf-decoration leaf-2"></i>
+        
+        <h1>Calculadora de IMC</h1>
+        <p class="description">Descubre tu Índice de Masa Corporal y recibe recomendaciones personalizadas para tu bienestar</p>
+        
+        <div class="form-group" style="animation-delay: 0.1s">
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" step="0.1" min="20" max="350" placeholder="Ej. 65.5 (máx 350 kg)">
+        </div>
+        
+        <div class="form-group" style="animation-delay: 0.2s">
+            <label for="height">Altura (m):</label>
+            <input type="number" id="height" step="0.01" min="1.20" max="2.20" placeholder="Ej. 1.75 (máx 2.20 m)">
+        </div>
+        
+        <button id="calculateBtn">
+            <i class="fas fa-calculator"></i> Calcular IMC
+        </button>
+        
+        <div class="analyzing-text" id="analyzingText">Analizando tus datos...</div>
+        
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div id="result"></div>
+        
+        <button id="whatsappBtn" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Consultar con especialista
+        </button>
+        
+        <table>
+            <tr>
+                <th>IMC</th>
+                <th>Clasificación</th>
+            </tr>
+            <tr>
+                <td>Menos de 18.5</td>
+                <td>Peso bajo</td>
+            </tr>
+            <tr>
+                <td>18.5 - 24.9</td>
+                <td>Peso normal</td>
+            </tr>
+            <tr>
+                <td>25 - 29.9</td>
+                <td>Sobrepeso</td>
+            </tr>
+            <tr>
+                <td>30 o más</td>
+                <td>Obesidad</td>
+            </tr>
+        </table>
+        
+        <div class="whatsapp-text">
+            ¿Necesitas asesoría nutricional personalizada? Estamos aquí para ayudarte.
+        </div>
+    </div>
+
+    <audio id="hoverSound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-interface-hover-notification-911.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
